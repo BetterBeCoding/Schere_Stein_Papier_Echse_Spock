@@ -11,7 +11,7 @@ Schere Stein Papier Variante mit GUI und Computergegner
         
         
         
-        Regeln des Spiels (mit 5D-Array lösen?)
+        Regeln des Spiels :
         
                       Schere Stein Papier  Echse Spock
        Schere                        X       X            ffttf
@@ -31,29 +31,25 @@ public class SpielLogik {
 
 
     public static void checkWinner() {
-        if (s == g)
-             w=4;
-            if ((s == 1) && (g == 3 )|| (g == 4))
+           if ((s == 1) && (g == 3 )|| ((s==1) &&(g == 4)))
 
-               w =1;
+            {w =1;}
 
-            if ((s == 2) && (g == 1) || (g == 4))
-                 w =1;
+           else if ((s == 2) && (g == 1) || ((s==2) && (g == 4)))
+            { w =1;}
 
-            if ((s == 3) && (g == 2) || (g == 4))
-                w =1;
+            else if ((s == 3) && (g == 2) || ((s==3) && (g == 4)))
+            { w =1;}
 
-            if ((s == 4) && (g == 3) || (g == 5))
-                w =1;
+            else if ((s == 4) && (g == 3) || ((s==4) && (g == 5)))
+            { w =1;}
 
-            if ((s == 5) && (g == 1 )|| (g == 3))
-                w =1;
-
-
-
+            else if ((s == 5) && (g == 1 )|| ((s==5) && (g == 3)))
+            { w =1;}
+            else if  (s == g)
+        {w=4;}
             else
-                w = 2;
-
+                {w=2;}
 
 
         }
