@@ -22,37 +22,37 @@ Schere Stein Papier Variante mit GUI und Computergegner
        
        X= Spieler gewinnt
        
-       package com.company;
+      package com.company;
 
 public class SpielLogik {
-    public static int s = 1;
+    public static int s = 3;
     public static int g = 3;
     public static int w =0;
 
 
-    public static int checkWinner() {
-
+    public static void checkWinner() {
+        if (s == g)
+             w=4;
             if ((s == 1) && (g == 3 )|| (g == 4))
 
-              return w =1;
+               w =1;
 
             if ((s == 2) && (g == 1) || (g == 4))
-              return   w =1;
+                 w =1;
 
             if ((s == 3) && (g == 2) || (g == 4))
-               return w =1;
+                w =1;
 
             if ((s == 4) && (g == 3) || (g == 5))
-               return w =1;
+                w =1;
 
             if ((s == 5) && (g == 1 )|| (g == 3))
-               return w =1;
+                w =1;
 
-            if (s == g)
-            return w=0;
+
 
             else
-              return   w = 4;
+                w = 2;
 
 
 
@@ -66,7 +66,7 @@ public class SpielLogik {
             if (w == 2)
                 System.out.println("Du hast verloren!");
 
-            if (w == 0)
+            if (w == 4)
                 System.out.println("Unentschieden!Nochmal!");
 
 
@@ -84,3 +84,17 @@ public class SpielLogik {
  4/3,4/5,
  5/1,5/3,
  **/
+ 
+ 
+ package com.company;
+
+public class Main {
+
+    public static void main  (String[] args) {
+        SpielLogik a = new SpielLogik();
+
+        SpielLogik.checkWinner();
+        SpielLogik.ausgabeWinner();
+    }
+}
+
